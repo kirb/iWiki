@@ -1,9 +1,6 @@
 <?php
 /**
- * MonoBook nouveau
- *
- * Translated from gwicke's previous TAL template version to remove
- * dependency on PHPTAL.
+ * iWiki skin
  *
  * @todo document
  * @file
@@ -80,17 +77,9 @@ class iWikiTemplate extends QuickTemplate {
 		<?php print Skin::makeGlobalVariablesScript( $this->data ); ?>
 
 		<script type="<?php $this->text('jsmimetype') ?>" src="<?php $this->text('stylepath' ) ?>/common/wikibits.js?<?php echo $GLOBALS['wgStyleVersion'] ?>"></script>
-		<script type="<?php $this->text('jsmimetype') ?>" src="<?php $this->text('stylepath' ) ?>/iwiki/jquery-1.4.4.min.js?<?php echo $GLOBALS['wgStyleVersion'] ?>"></script>
+		<script type="<?php $this->text('jsmimetype') ?>" src="<?php $this->text('stylepath' ) ?>/iwiki/jquery.min.js?<?php echo $GLOBALS['wgStyleVersion'] ?>"></script>
 		<script type="<?php $this->text('jsmimetype') ?>" src="<?php $this->text('stylepath' ) ?>/iwiki/jqtouch/jqtouch/jqtouch.js?<?php echo $GLOBALS['wgStyleVersion'] ?>"></script>
-		<script type="<?php $this->text('jsmimetype') ?>">
-		$(function(){
-			$("a").addClass("forward");
-		});
-		$.jQTouch({
-			cacheGetRequests:false,
-			formSelector:"jqtform"
-		});
-		</script>
+		<script type="<?php $this->text('jsmimetype') ?>">$(function(){$("a").addClass("forward")});$.jQTouch({cacheGetRequests:false,formSelector:"jqtform"})</script>
 		<!-- Head Scripts -->
 <?php $this->html('headscripts') ?>
 <?php	if($this->data['jsvarurl']) { ?>

@@ -10,10 +10,9 @@ _This theme will **not** work with MediaWiki 1.17 or later, instead it will just
 4. `rm -rf .git README.md`
 5. Open your `LocalSettings.php` and add the following code:
 
-        $ua=$_SERVER["HTTP_USER_AGENT"];
-        if(stristr($ua,"Mobile")||stristr($ua,"iPad")||stristr($ua,"iPhone")||stristr($ua,"iPod")
-          ||stristr($ua,"BlackBerry")||stristr($ua,"Opera Mini")
-          ||stristr($ua,"Opera Mobile")||stristr($ua,"Nokia")){
+	if (preg_match("/mobile|ipad|iphone|ipod|blackberry|opera mini|opera mobile|nokia|windows phone|android/i", $_SERVER['HTTP_USER_AGENT'])) {
             $wgDefaultSkin = "iwiki";
         }
+    Optionally, you can also install a jQTouch theme to your `skins/iwiki/jqtouch/themes` folder and set it as default like so, changing `apple` to the theme you want:
+        $wgTouchTheme = "apple";
 6. Test on an iDevice. Enjoy ;)
