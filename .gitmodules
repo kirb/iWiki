@@ -1,0 +1,3 @@
+[submodule "iwiki/jqtouch"]
+	path = iwiki/jqtouch
+	url = git://github.com/senchalabs/jQTouch.git
