@@ -29,7 +29,7 @@ class SkiniWiki extends SkinTemplate {
 		global $wgTouchTheme;
 		parent::setupSkinUserCss( $out );
 		$out->addStyle( 'iwiki/jqtouch/jqtouch/jqtouch.css', 'all' );
-        $out->addStyle( 'iwiki/jqtouch/themes/'.($wgTouchTheme?$wgTouchTheme:"apple").'/theme.css', 'all' );
+		$out->addStyle( 'iwiki/jqtouch/themes/'.($wgTouchTheme?$wgTouchTheme:"apple").'/theme.css', 'all' );
 		$out->addStyle( 'iwiki/main.css', 'screen' );
 	}
 }
