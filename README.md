@@ -21,3 +21,6 @@ Optionally, you can also install a jQTouch theme to your `skins/iwiki/jqtouch/th
 $wgTouchTheme = "apple";
 ```
 5. Test on an iDevice. Enjoy ;)
+
+## License
+Licensed under the GNU General Public License, version 2.0. Refer to [LICENSE.md](LICENSE.md).
